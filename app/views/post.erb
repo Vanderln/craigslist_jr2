@@ -1,0 +1,15 @@
+<div class="container">
+  <h3>billamplist</h3>
+  <h2><%=@category.title%></h2>
+  <h3><%=@post.title%>- $<%=@post.price.to_i%></h3>
+  <p><%=@post.description%></p>
+  <p>City: <%=@post.location%></p>
+  <p><a href="mailto:<%=@post.email%>"><%=@post.email%></a></p>
+  <p>Created at: <%=@post.created_at%></p>
+  <br>
+  <br>
+  <p><a href="/posts/edit">Edit this post</a></p>
+  <p><a href="/<%=@category.url_slug%>">Category Page</a></p>
+  <p><a href="/">Index Page</a></p>
+</div>
+

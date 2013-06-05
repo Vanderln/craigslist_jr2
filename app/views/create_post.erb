@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Create your post below</h1>
+  <h2>Your user key is <%=@key%></h2>
+  <h2>You will need this key to edit your post!</h2>
+
+<form action="/create_post/<%=@key%>" method="Post">
+  Category    <select name="post[category_id]">
+                <%@category.each do |cat|%>
+                <option value="<%=cat.id%>"><%=cat.title%></option>
+                <%end%>
+              </select><br>
+  Post Title: <input type="text" name="post[title]"> <br>
+  Price:      <input type="text" name="post[price]"> <br>
+  Your email: <input type="text" name="post[email]"> <br>
+  Location  : <input type="text" name="post[location]"> <br>
+  <textarea rows="3" cols="60" placeholder="Your text goes here!" name="post[description]"></textarea>
+  <input type="submit" value="Create a post">
+  <input type="hidden" value="<%=@key%>" name="post[user_key]">
+</form>
+
+</div>

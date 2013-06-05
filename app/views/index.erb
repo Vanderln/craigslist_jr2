@@ -1,0 +1,13 @@
+
+<div class="container">
+  <h1>billamplist</h1>
+
+  <%@category.each do |category|%>
+  <h2><a href="/<%= category.url_slug%>"><%= category.title%></a></h2>
+  <%end%>
+  <br>
+  <br>
+  <br>
+  <p><a href="/create_post">Create a post</a></p>
+  <p><a href="/posts/edit">Edit a Post</a></p>
+</div>
